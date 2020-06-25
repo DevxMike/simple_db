@@ -20,7 +20,7 @@ int main(int argc, char** argv){
         exit(1);
     }
     const std::vector<std::string> args(argv + 1, argv + argc);
-    if(args.front().front() == '-'){
+    if(args.front().size() == 2 && args.front().front() == '-'){
         switch(args.front().back()){
             case 'h':
                 cout << help << endl;
